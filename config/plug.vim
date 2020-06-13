@@ -37,14 +37,6 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'honza/vim-snippets'
 " 快速选择窗口
 Plug 't9md/vim-choosewin',  { 'on': 'ChooseWin' }
-" 快速移动
-Plug 'easymotion/vim-easymotion', {'on':
-    \ [
-    \ '<Plug>(easymotion-bd-f)', '<Plug>(easymotion-overwin-f)',
-    \ '<Plug>(easymotion-overwin-f2)', '<Plug>(easymotion-bd-jk)',
-    \ '<Plug>(easymotion-overwin-line)', '<Plug>(easymotion-bd-w)',
-    \ '<Plug>(easymotion-overwin-w)'
-    \ ]}
 " 对齐
 Plug 'junegunn/vim-easy-align', {'on': ['EasyAlign']}
 " 对齐线
@@ -58,7 +50,8 @@ Plug 'voldikss/vim-floaterm', {'on': ['FloatermNew', 'FloatermToggle']}
 " 笔记插件，支持markdown
 Plug 'vimwiki/vimwiki', {'on': ['VimwikiIndex', 'VimwikiTabIndex', 'VimwikiDiaryIndex']}
 " 功能很强的折叠插件, zc zo
-Plug 'pseewald/vim-anyfold'
+" Cause slow loading
+"Plug 'pseewald/vim-anyfold'
 " 起始界面
 Plug 'mhinz/vim-startify'
 " 翻译插件
@@ -99,20 +92,20 @@ Plug 'makerj/vim-pdf', {'for': 'pdf'}
 " 运行代码
 " plug 'skywind3000/asynctasks.vim', {'on': ['asynctask','asynctaskedit','asynctasklist','asynctaskmarco', 'asynctaskprofile']}
 " plug 'skywind3000/asyncrun.vim', {'on': ['asyncrun', 'asyncstop']}
-if has('nvim')
-    Plug 'nvim-treesitter/nvim-treesitter'
-else
-    " 语法高亮包，使用treesitter代替
+"if has('nvim')
+"    Plug 'nvim-treesitter/nvim-treesitter'
+"else
+"    " 语法高亮包，使用treesitter代替
     Plug 'sheerun/vim-polyglot'
-endif
+"endif
 " 总是匹配tag
 Plug 'valloric/MatchTagAlways', {'for': ['html', 'css', 'xml']}
 " 显示颜色
-if has('nvim')
-    Plug 'norcalli/nvim-colorizer.lua'
-else
+"if has('nvim')
+"    Plug 'norcalli/nvim-colorizer.lua'
+"else
     Plug 'RRethy/vim-hexokinase',  { 'do': 'make hexokinase' }
-endif
+"endif
 " 加强版的 go to file
 Plug 'tpope/vim-apathy'
 " 查看启动时间

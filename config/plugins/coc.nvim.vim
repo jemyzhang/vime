@@ -1,4 +1,3 @@
-
 " 卸载不在列表中的插件
 function! s:uninstall_unused_coc_extensions() abort
     for e in keys(json_decode(join(readfile(expand(g:coc_data_home . '/extensions/package.json')), "\n"))['dependencies'])
@@ -292,6 +291,7 @@ endif
 " coc-prettier
 if g:HasCocPlug('coc-prettier')
     call coc#config('prettier.tabWidth', 4)
+    call coc#config('coc.preferences.formatOnSaveFiletypes', ['c', 'c++', 'json', 'python','javascript', 'php'])
 endif
 
 " coc-git
@@ -340,6 +340,12 @@ endif
 " coc-rainbow-fart
 if g:HasCocPlug('coc-rainbow-fart')
     call coc#config("rainbow-fart.ffplay", "ffplay")
+endif
+
+" coc-vimlsp
+if HasCocPlug('coc-vimlsp')
+    call coc#config("vimlsp.indexes.count", 1)
+    call coc#config("vimlsp.indexes.gap", 1000)
 endif
 
 " coc-explorer

@@ -6,7 +6,7 @@ filetype plugin indent on
 set encoding=utf-8                                          " 编码
 set fileencodings=ucs-bom,utf-8,gb18030,cp936,latin1        " 编码猜测
 set number
-set relativenumber                                          " 设置相对行号
+"set relativenumber                                         " 设置相对行号
 set incsearch                                               " 搜索时即高亮
 set hlsearch                                                " 高亮匹配内容
 set wrap
@@ -15,7 +15,7 @@ set autoindent                                              " 自动换行缩进
 set linebreak                                               " 软折行
 set noswapfile                                              " 禁止生成swap文件
 set hidden                                                  " 终端隐藏后不结束
-set ignorecase                                              " 忽略大小写
+"set ignorecase                                             " 忽略大小写
 " set smartcase
 set infercase                                               " Adjust case in insert completion mode
 set history=500                                             " 历史命令
@@ -52,7 +52,7 @@ set ttimeoutlen=10
 set updatetime=100                                  " 更新时间100ms 默认4000ms 写入swap的时间
 set shortmess+=c
 
-set mouse=n                                         " 允许使用鼠标, normal生效，a则是全模式生效
+"set mouse=n                                         " 允许使用鼠标, normal生效，a则是全模式生效
 set cmdheight=1
 set conceallevel=0                                  " json文件不显示引号
 set laststatus=2                                    " 状态栏, lightline中更改了
