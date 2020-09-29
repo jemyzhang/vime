@@ -92,20 +92,20 @@ Plug 'makerj/vim-pdf', {'for': 'pdf'}
 " 运行代码
 " plug 'skywind3000/asynctasks.vim', {'on': ['asynctask','asynctaskedit','asynctasklist','asynctaskmarco', 'asynctaskprofile']}
 " plug 'skywind3000/asyncrun.vim', {'on': ['asyncrun', 'asyncstop']}
-"if has('nvim')
-"    Plug 'nvim-treesitter/nvim-treesitter'
-"else
-"    " 语法高亮包，使用treesitter代替
+if has('nvim')
+    Plug 'nvim-treesitter/nvim-treesitter'
+else
+    " 语法高亮包，使用treesitter代替
     Plug 'sheerun/vim-polyglot'
-"endif
+endif
 " 总是匹配tag
 Plug 'valloric/MatchTagAlways', {'for': ['html', 'css', 'xml']}
 " 显示颜色
-"if has('nvim')
-"    Plug 'norcalli/nvim-colorizer.lua'
-"else
+if has('nvim')
+    Plug 'norcalli/nvim-colorizer.lua'
+else
     Plug 'RRethy/vim-hexokinase',  { 'do': 'make hexokinase' }
-"endif
+endif
 " 加强版的 go to file
 Plug 'tpope/vim-apathy'
 " 查看启动时间
