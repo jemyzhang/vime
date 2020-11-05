@@ -1,6 +1,14 @@
 """
-" 配置一些需要的全局变量
-let g:root_path = $HOME . '/.cache/vim'
+let g:path_config_path = expand("$HOME/.path.vim")
+if filereadable(g:path_config_path)
+    exec 'source ' . g:path_config_path
+    if empty(g:root_path)
+        let g:root_path = $HOME . '/.cache/vim'
+    endif
+else
+    " 配置一些需要的全局变量
+    let g:root_path = $HOME . '/.cache/vim'
+endif
 " vim插件安装目录
 let g:plugins_path = g:root_path . '/plugins'
 " coc插件安装目录
@@ -10,7 +18,7 @@ let g:config_root_path = expand('<sfile>:p:h') . '/config'
 " session保存目录
 let g:session_dir = $HOME.'/.cache/vim/sessions/'
 " 撤销记录文件
-let g:undo_dir = g:root_path . '/undo'
+let g:undo_dir = $HOME.'/.cache/vim/undo/'
 " 操作系统判别
 if(has("win32") || has("win64") || has("win95") || has("win16")) | let g:isWindows = v:true
 else | let g:isWindows = v:false | endif
