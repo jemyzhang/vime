@@ -396,7 +396,7 @@ if g:HasCocPlug('coc-explorer')
     " call coc#config("explorer.file.autoReveal", v:true)
     " call coc#config("explorer.keyMappingMode", "none")
       " "\ 'a': v:false,
-    call coc#config("explorer.keyMappings", {
+    call coc#config("explorer.keyMappings.global", {
       \ 'k': 'nodePrev',
       \ 'j': 'nodeNext',
       \ 'h': 'collapse',
